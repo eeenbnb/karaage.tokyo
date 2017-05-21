@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.box-karaage {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/karaage1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.box-center {
+  overflow:hidden;
+}
+.box-center .p-center {
+  color: #E0E0E0;
+  font-family: 'Caveat', cursive;
+  font-size: calc(150% + 4 * (100vw - 600px) / 400);
+  padding-top: 50vh;
+  text-align: center;
+}
+.box-center .p-center2 {
+  color: #E0E0E0;
+  font-family: 'Caveat', cursive;
+  font-size: calc(150% + 4 * (100vw - 600px) / 400);
+  text-align: center;
+}
