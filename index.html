@@ -2,10 +2,16 @@
   <meta charset="utf-8">
   <title>karaage.tokyo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- JavaScript -->
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/emojione/3.0.3/lib/js/emojione.min.js"></script>
+  <script src="./assets/js/top.js"></script>
+
+  <!-- css -->
   <link rel="stylesheet" type="text/css" href="./assets/css/common.css">
   <link
   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -14,14 +20,28 @@
   crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 </head>
 <body>
+  <div class="spinner">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div>
+  <div id="main" hidden>
+
+    <!-- top karaage -->
     <div class="box-karaage">
       <div class="box-center">
-        <p class="p-center animated rubberBand">
+        <p class="p-center animated">
           karaage.tokyo
         </p>
-        <p class="p-center2">-Fried chicken-</p>
+        <p class="p-center2 animated">-Fried chicken-</p>
+        <p class="p-center2 animated infinite bounce">↓</p>
+        <div id="emoji" class="img-center"><div>
       </div>
+    </div>
+
+    <!-- 2nd karaage -->
+    <div class="box-tori" hidden>
     </div>
 </body>
