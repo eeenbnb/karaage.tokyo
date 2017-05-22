@@ -8,17 +8,34 @@ $(function(){
 });
 //click tori
 $(function(){
-  // $('#tori').click(function(){
-  //   $("#tori").removeClass('rubberBand');
-  //   $("#tori").addClass('bounceOutUp');
-  //   console.log('click tori');
-  //   $('.box-tori').fadeIn(1000);
-  //   $('.box-karaage').fadeOut(1000);
-  // });
+  $('#tori').click(function(){
+     $("#tori").removeClass('rubberBand');
+     $("#tori").addClass('bounce');
+     $("#tori").delay(1500).queue(function() {
+       $(this).removeClass('bounce').dequeue();
+     });
+  });
 });
 //load event
 $(window).on("load", function(){
-  $("#main").show();
-  $(".spinner").fadeOut("1000");
   $(".animated").addClass('rubberBand');
+});
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass               :   'fade-in',
+    outClass              :   'fade-out',
+    inDuration            :    1500,
+    outDuration           :    800,
+    linkElement           :   '.animsition-link',
+    loading               :    true,
+    loadingParentElement  :   'body',
+    loadingClass          :   'animsition-loading',
+    unSupportCss          : [ 'animation-duration',
+                              '-webkit-animation-duration',
+                              '-o-animation-duration'
+                            ],
+    overlay               :   false,
+    overlayClass          :   'animsition-overlay-slide',
+    overlayParentElement  :   'body'
+  });
 });

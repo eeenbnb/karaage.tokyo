@@ -4,84 +4,41 @@ body {
 }
 
 /*
-  loading class
-*/
-.spinner {
-  width: 40px;
-  height: 40px;
-
-  position: relative;
-  margin: 50vh auto;
-  z-index: 1000;
-  background-color: #e0e0e0;
-}
-
-.double-bounce1, .double-bounce2 {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #333;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-  animation: sk-bounce 2.0s infinite ease-in-out;
-}
-
-.double-bounce2 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
-}
-
-@-webkit-keyframes sk-bounce {
-  0%, 100% { -webkit-transform: scale(0.0) }
-  50% { -webkit-transform: scale(1.0) }
-}
-
-@keyframes sk-bounce {
-  0%, 100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  } 50% {
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
-  }
-}
-
-/*
   box class
 */
 .box-karaage {
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/karaage1.jpg");
-  background-size: cover;
-  background-position: center;
+  position: relative;
 }
-.box-karaage:before {
-  background: inherit;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+.karaage-back {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(7px);
+  -moz-filter: blur(7px);
+  -o-filter: blur(7px);
+  -ms-filter: blur(7px);
+  filter: blur(7px);
   z-index: -1;
+  position: absolute;
+  overflow: hidden;
 }
 
 .box-center {
-  overflow:hidden;
+  left: 0;
+  right: 0;
+  position: absolute;
+  overflow: hidden;
 }
 .box-center .p-center {
-  color: #E0E0E0;
+  color: #606060;
   font-family: 'Caveat', cursive;
   font-size: calc(150% + 4 * (100vw - 600px) / 400);
-  padding-top: 50vh;
+  padding-top: 42.5vh;
   text-align: center;
 }
 .box-center .p-center2 {
-  color: #E0E0E0;
+  color: #606060;
   font-family: 'Caveat', cursive;
   font-size: calc(150% + 4 * (100vw - 600px) / 400);
   text-align: center;
@@ -89,6 +46,55 @@ body {
 
 .img-center {
   text-align: center;
+}
+
+.button-center {
+  text-align: center;
+}
+
+/*
+  button
+*/
+.button {
+  margin-top: 12px;
+	display: inline-block;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  width: 150px;
+	height: 54px;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+}
+.button::before,
+.button::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+.button,
+.button::before,
+.button::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+.button {
+	background-color: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	line-height: 50px;
+}
+.button:hover {
+	background-color: rgba(255, 255, 255, .2);
+}
+.button .font-back{
+  background-color: transparent;
+  border: 2px solid #606060;
+	color: #606060;
 }
 
 /*
