@@ -98,6 +98,35 @@ body {
 }
 
 /*
+  link
+*/
+
+.box-link {
+  padding-top: 10vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+.box-link .box-link-content {
+  padding-top: 10px;
+  height: 80vh;
+  font-family: "Rounded Mplus 1c";
+  color: #606060;
+  text-align: center;
+  background-color: rgba( 200, 200, 200, 0.55 );
+  border-radius: 10px;
+  margin: auto;
+  display: -webkit-flex; /* Safari用 */
+  display: flex;
+  -webkit-justify-content: center; /* Safari用 */
+  justify-content: center;
+  -webkit-align-items: center; /* Safari用 */
+}
+.box-link .box-link-content .button {
+  font-family: "Rounded Mplus 1c";
+}
+
+/*
   tori box
 */
 .box-tori {
@@ -106,4 +135,16 @@ body {
   background-image: url("../images/karaage2.jpg");
   background-size: cover;
   background-position: center;
+}
+
+/*
+  no dot ul
+*/
+.no-dot {
+  list-style:none;
+  padding-left: 0;
+}
+.no-dot li {
+  text-align: center;
+    display: list-item;
 }
